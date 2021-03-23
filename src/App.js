@@ -56,12 +56,12 @@ function App() {
             </div>
           </div>
 
-          <div className="definitions">
+          <div className="details">
             <div className="row">
               <div className="col-2 word-type">
                 <p>noun</p>
               </div>
-              <div className="col-5">
+              <div className="col-5 definition">
                 <h4>
                   1. a continuous area or expance which is free, available or
                   unoccupied
