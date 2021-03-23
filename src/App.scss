@@ -1,0 +1,26 @@
+$mainColour: #c79c7d;
+$secondaryColour: #a96540;
+$accentColour: #a69f99;
+$textColour: #22211e;
+
+body {
+  background-color: $mainColour;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 16pt;
+  color: black;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 5vmin);
+  color: white;
+}
