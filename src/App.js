@@ -28,7 +28,7 @@ function App() {
         <div className="App-search">
           <div className="row">
             <div className="col-9">
-              <h2>what would you like to understand?</h2>
+              <h2>what would you like to know?</h2>
               <form className="Search">
                 <div className="input-group">
                   <input
@@ -63,10 +63,10 @@ function App() {
               </div>
               <div className="col-5 definition">
                 <h4>
-                  1. a continuous area or expance which is free, available or
+                  1. a continuous area or expanse which is free, available or
                   unoccupied
                 </h4>
-                <p>"a table took up much of the space"</p>
+                <p className="example">"a table took up much of the space"</p>
                 <div className="row synonyms">
                   <div className="col-3">
                     <h5>synonyms</h5>
@@ -90,9 +90,9 @@ function App() {
                 </div>
               </div>
               <div className="col-5 phrases">
-                <p>phrases</p>
-                <p>watch this space</p>
-                <p>
+                <p className="small-caps">phrases</p>
+                <h4>watch this space</h4>
+                <p className="example">
                   (informal) 'the results of the competition have still to come
                   through -- watch this space
                 </p>
