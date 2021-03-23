@@ -3,6 +3,8 @@ $secondaryColour: #a96540;
 $accentColour: #a69f99;
 $textColour: #fcf0e8;
 
+$appBorder: 1px solid rgba(255, 255, 255, 0.2);
+
 body {
   background-color: $mainColour;
   font-family: "Cormorant Garamond", serif;
@@ -87,18 +89,24 @@ body {
 
 .App-body {
   .definitions {
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: $appBorder;
+    border-bottom: $appBorder;
+    // going to have to massively clean this up later
   }
 
   h3 {
     font-size: 10rem;
     padding-bottom: 2rem;
     font-weight: 800;
-    margin-left: 0.75rem;
   }
 
   .word-type {
     text-align: right;
+    border-right: $appBorder;
+  }
+
+  .phrases {
+    border-left: $appBorder;
   }
 
   h5 {
@@ -107,7 +115,6 @@ body {
     padding-top: 0.75rem;
   }
   ul {
-    // display: inline-block;
     padding-inline-start: 0;
   }
   li {

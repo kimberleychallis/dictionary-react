@@ -17,11 +17,6 @@ function App() {
                   </a>
                 </li>
                 <li>
-                  <a href="https://dribbble.com/shots/7114674-Online-dictionary?utm_source=Clipboard_Shot&utm_campaign=denisvaletin&utm_content=Online%20dictionary&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=denisvaletin&utm_content=Online%20dictionary&utm_medium=Social_Share">
-                    inspired by
-                  </a>
-                </li>
-                <li>
                   <a href="https://github.com/kimberleychallis/dictionary-react">
                     about
                   </a>
@@ -56,7 +51,9 @@ function App() {
         </div>
         <div className="App-body">
           <div className="row word">
-            <h3>space</h3>
+            <div className="col">
+              <h3>space</h3>
+            </div>
           </div>
 
           <div className="definitions">
@@ -70,7 +67,7 @@ function App() {
                   unoccupied
                 </h4>
                 <p>"a table took up much of the space"</p>
-                <div className="row">
+                <div className="row synonyms">
                   <div className="col-3">
                     <h5>synonyms</h5>
                   </div>
@@ -92,7 +89,14 @@ function App() {
                   </div>
                 </div>
               </div>
-              <div className="col-5"></div>
+              <div className="col-5 phrases">
+                <p>phrases</p>
+                <p>watch this space</p>
+                <p>
+                  (informal) 'the results of the competition have still to come
+                  through -- watch this space
+                </p>
+              </div>
             </div>
           </div>
         </div>
