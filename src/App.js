@@ -56,39 +56,42 @@ function App() {
           <div className="row word">
             <h3>space</h3>
           </div>
-          <div className="row">
-            <div className="col-2">
-              <p>noun</p>
-            </div>
-            <div className="col-5">
-              <h4>
-                1. a continuous area or expance which is free, available or
-                unoccupied
-              </h4>
-              <p>"a table took up much of the space"</p>
-              <div className="row">
-                <div className="col-3">
-                  <h5>synonyms</h5>
-                </div>
-                <div className="col-9">
-                  <ul>
-                    <li>slot</li>
-                    <li>arena</li>
-                    <li>capacity</li>
-                    <li>zone</li>
-                    <li>area</li>
-                    <li>field</li>
-                    <li>location</li>
-                    <li>territory</li>
-                    <li>area</li>
-                    <li>field</li>
-                    <li>location</li>
-                    <li>territory</li>
-                  </ul>
+
+          <div className="definitions">
+            <div className="row">
+              <div className="col-2 word-type">
+                <p>noun</p>
+              </div>
+              <div className="col-5">
+                <h4>
+                  1. a continuous area or expance which is free, available or
+                  unoccupied
+                </h4>
+                <p>"a table took up much of the space"</p>
+                <div className="row">
+                  <div className="col-3">
+                    <h5>synonyms</h5>
+                  </div>
+                  <div className="col-9">
+                    <ul>
+                      <li>slot</li>
+                      <li>arena</li>
+                      <li>capacity</li>
+                      <li>zone</li>
+                      <li>area</li>
+                      <li>field</li>
+                      <li>location</li>
+                      <li>territory</li>
+                      <li>area</li>
+                      <li>field</li>
+                      <li>location</li>
+                      <li>territory</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
+              <div className="col-5"></div>
             </div>
-            <div className="col-5"></div>
           </div>
         </div>
       </div>
