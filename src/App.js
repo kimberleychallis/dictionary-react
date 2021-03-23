@@ -1,3 +1,4 @@
+import Dictionary from "./Dictionary";
 import "./App.scss";
 
 function App() {
@@ -25,30 +26,9 @@ function App() {
             </div>
           </div>
         </header>
-        <div className="App-search">
-          <div className="row">
-            <div className="col-9">
-              <h2>what would you like to know?</h2>
-              <form className="Search">
-                <div className="input-group">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Enter a word"
-                    aria-label="Word search"
-                    aria-describedby="button-addon2"
-                    required
-                  />
-                  <div className="input-group-append">
-                    <button className="btn" type="submit">
-                      search
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
+
+        <Dictionary />
+
         <div className="App-body">
           <div className="row word">
             <div className="col">
