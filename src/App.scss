@@ -1,26 +1,51 @@
 $mainColour: #c79c7d;
 $secondaryColour: #a96540;
 $accentColour: #a69f99;
-$textColour: #22211e;
+$textColour: #fcf0e8;
 
 body {
   background-color: $mainColour;
   font-family: "Cormorant Garamond", serif;
   font-weight: 600;
   font-size: 16pt;
-  color: black;
+  color: $textColour;
 }
 
 .App {
-  text-align: center;
-}
+  .App-header {
+    font-size: 1rem;
+    margin-top: 4rem;
 
-.App-header {
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 5vmin);
-  color: white;
+    h1 {
+      font-style: italic;
+      display: inline-block;
+      font-size: 1rem;
+    }
+
+    .menubar {
+      text-align: right;
+
+      li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 0 1rem;
+      }
+      a {
+        color: $textColour;
+        &:hover {
+          color: $secondaryColour;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .App-body {
+    padding-top: 4rem;
+    h2 {
+      font-style: italic;
+      font-size: 4rem;
+      // font-weight: 800;
+    }
+  }
 }
