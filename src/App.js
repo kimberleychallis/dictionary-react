@@ -22,7 +22,9 @@ function App() {
                   </a>
                 </li>
                 <li>
-                  <a href="#">about</a>
+                  <a href="https://github.com/kimberleychallis/dictionary-react">
+                    about
+                  </a>
                 </li>
               </ul>
             </div>
