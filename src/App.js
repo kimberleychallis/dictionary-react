@@ -29,21 +29,6 @@ function App() {
           </header>
 
           <Dictionary />
-        </div>
-
-        <div className="App-body">
-          <div className="container">
-            <div className="row align-items-center word">
-              <div className="col-8">
-                <h3 className="headword">space</h3>
-              </div>
-              <div className="col-4 text-right">
-                <button className="pronunciation">
-                  <i className="fas fa-volume-up"></i> /speɪs/
-                </button>
-              </div>
-            </div>
-          </div>
 
           {/* ROW */}
 
