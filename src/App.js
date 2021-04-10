@@ -34,10 +34,10 @@ function App() {
         <div className="App-body">
           <div className="container">
             <div className="row align-items-center word">
-              <div className="col-10">
+              <div className="col-8">
                 <h3 className="headword">space</h3>
               </div>
-              <div className="col-2">
+              <div className="col-4 text-right">
                 <button className="pronunciation">
                   <i className="fas fa-volume-up"></i> /speɪs/
                 </button>
@@ -53,7 +53,7 @@ function App() {
                 <div className="col-2 partOfSpeech">
                   <p>noun</p>
                 </div>
-                <div className="col-6 entry">
+                <div className="col col-md-6 entry">
                   <h4 className="definition">
                     1. a continuous area or expanse which is free, available or
                     unoccupied
@@ -109,7 +109,7 @@ function App() {
                     </div>
                   </div>
                 </div>
-                <div className="col-4 phrases">
+                <div className="col col-md-4 phrases">
                   <p className="-small-caps">example</p>
                   <p className="example">"a table took up much of the space"</p>
                 </div>

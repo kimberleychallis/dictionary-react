@@ -16,7 +16,7 @@ const Dictionary = () => {
     <div>
       <div className="App-search">
         <div className="row">
-          <div className="col-9">
+          <div className="col">
             <h2>what would you like to know?</h2>
             <form className="Search" onSubmit={handleSubmit}>
               <div className="input-group">
