@@ -2,7 +2,6 @@ import React from "react";
 
 const Meaning = (props) => {
   // console.log(props.resultDetails);
-  // return "Meaning component";
 
   return (
     <div className="details">
