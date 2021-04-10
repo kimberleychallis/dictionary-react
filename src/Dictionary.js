@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Dictionary() {
+const Dictionary = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   function handleSubmit(event) {
@@ -41,4 +41,6 @@ export default function Dictionary() {
       </div>
     </div>
   );
-}
+};
+
+export default Dictionary;

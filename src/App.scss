@@ -89,26 +89,36 @@ body {
 }
 
 .App-body {
-  h3 {
+  border-bottom: $appBorder;
+  .headword {
     font-size: 10rem;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
     font-weight: 800;
   }
 
   .details {
     border-top: $appBorder;
-    border-bottom: $appBorder;
-    // going to have to massively clean this up later
   }
 
-  .definition {
-    padding: 1rem;
+  .entry {
+    padding: 1rem 2rem;
+    // border: 1px solid red;
   }
 
   .word-type {
     text-align: right;
     border-right: $appBorder;
-    padding: 1rem;
+    padding: 1.4rem 2rem;
+    font-style: italic;
+  }
+
+  .definition {
+    padding-bottom: 1rem;
+  }
+
+  .synonyms {
+    // border: 1px solid red;
+    font-size: 1rem;
   }
 
   .phrases {
@@ -116,14 +126,10 @@ body {
     padding: 1rem;
   }
 
-  .example {
-    font-size: 1rem;
-  }
-
-  .small-caps {
+  .-small-caps {
     text-transform: uppercase;
     font-size: 0.75rem;
-    letter-spacing: 0.25rem;
+    letter-spacing: 0.15rem;
     font-weight: 800;
   }
 
@@ -132,9 +138,9 @@ body {
   }
 
   h5 {
-    font-size: 0.75rem;
+    // font-size: 0.75rem;
     font-weight: 800;
-    padding-top: 0.75rem;
+    // padding-top: 0.75rem;
   }
 
   ul {
@@ -145,6 +151,14 @@ body {
     list-style-type: none;
     display: inline-block;
     padding: 0 0.25rem;
-    font-size: 0.75rem;
+    // font-size: 0.75rem;
+    // border: 1px solid red;
   }
+}
+.word {
+  // border: 1px solid red;
+}
+
+.details {
+  // border: 1px solid red;
 }
