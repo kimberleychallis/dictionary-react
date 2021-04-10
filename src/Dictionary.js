@@ -9,7 +9,7 @@ const Dictionary = () => {
   const search = (response) => {
     // Sample API response: https://api.dictionaryapi.dev/api/v2/entries/en_GB/space
     // console.log("API CALL");
-    setSearchResults(response.data[0]);
+    setSearchResults(response.data);
     // console.log(response.data[0].meanings[0].definitions[0].definition);
   };
 
@@ -27,33 +27,36 @@ const Dictionary = () => {
 
   return (
     <div>
-      <div className="App-search">
-        <div className="row">
-          <div className="col">
-            <h2>what would you like to know?</h2>
-            <form className="Search" onSubmit={handleSubmit}>
-              <div className="input-group">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Enter a word"
-                  aria-label="Word search"
-                  aria-describedby="button-addon2"
-                  onChange={handleEntry}
-                  required
-                />
-                <div className="input-group-append">
-                  <button className="btn" type="submit">
-                    search
-                  </button>
+      <div className="container">
+        <div className="App-search">
+          <div className="row">
+            <div className="col">
+              <h2>what would you like to know?</h2>
+              <form className="Search" onSubmit={handleSubmit}>
+                <div className="input-group">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter a word"
+                    aria-label="Word search"
+                    aria-describedby="button-addon2"
+                    onChange={handleEntry}
+                    required
+                  />
+                  <div className="input-group-append">
+                    <button className="btn" type="submit">
+                      search
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-
-      <Results results={searchResults} />
+      <div className="App-body">
+        <Results results={searchResults} />
+      </div>
     </div>
   );
 };

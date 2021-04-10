@@ -27,12 +27,13 @@ function App() {
               </div>
             </div>
           </header>
+        </div>
 
-          <Dictionary />
+        <Dictionary />
 
-          {/* ROW */}
+        {/* ROW */}
 
-          <div className="details">
+        {/* <div className="details">
             <div className="container">
               <div className="row">
                 <div className="col-2 partOfSpeech">
@@ -78,10 +79,9 @@ function App() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          {/* APP WRAPPERS */}
-        </div>
+        {/* APP WRAPPERS */}
       </div>
     </div>
   );
