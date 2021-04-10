@@ -1,4 +1,5 @@
 import React from "react";
+import Meaning from "./Meaning";
 
 const Results = (props) => {
   // console.log(props.results);
@@ -14,11 +15,13 @@ const Results = (props) => {
               <button className="pronunciation">
                 <i className="fas fa-volume-up"></i>{" "}
                 {/* Need to make the sound clip play, somehow */}
+                {/* Alternatively, could make it link to a guide on phonetics */}
                 {props.results.phonetics[0].text}
               </button>
             </div>
           </div>
         </div>
+        <Meaning />
       </div>
     );
   } else {
