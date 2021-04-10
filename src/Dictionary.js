@@ -1,16 +1,24 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const Dictionary = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  function handleSubmit(event) {
+  const search = (response) => {
+    console.log(response.data);
+  };
+
+  const handleSubmit = (event) => {
     event.preventDefault();
     alert(`Searching for ${searchTerm}`);
-  }
 
-  function handleEntry(event) {
+    const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_GB/${searchTerm}`;
+    axios.get(apiUrl).then(search);
+  };
+
+  const handleEntry = (event) => {
     setSearchTerm(event.target.value);
-  }
+  };
 
   return (
     <div>
