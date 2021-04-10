@@ -1,7 +1,7 @@
 import React from "react";
 
 const Meaning = (props) => {
-  console.log(props.resultDetails);
+  // console.log(props.resultDetails);
   // return "Meaning component";
 
   return (
@@ -48,18 +48,23 @@ const Meaning = (props) => {
             })}
           </div>
 
-          {/* EXAMPLE PHRASES */}
-
           <div className="col col-md-4 phrases">
-            <p className="-small-caps">example</p>
-            <p className="example">
-              &ldquo;
-              {/* {props.resultDetails.definitions[0].example} */}
-              &rdquo;
-            </p>
+            <p className="-small-caps">in use</p>
+
+            {/* EXAMPLE PHRASES */}
+
+            {props.resultDetails.definitions.map((definition, index) => {
+              return (
+                <p className="example" key={index}>
+                  {index + 1}. &ldquo;{definition.example}
+                  &rdquo;
+                </p>
+              );
+            })}
+
+            {/* END EXAMPLE PHRASES */}
           </div>
 
-          {/* END EXAMPLE PHRASES */}
           {/* END OF MAPPING */}
         </div>
       </div>
