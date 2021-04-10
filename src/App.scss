@@ -89,11 +89,29 @@ body {
 }
 
 .App-body {
+  margin-bottom: 4rem;
   border-bottom: $appBorder;
   .headword {
     font-size: 10rem;
-    padding-bottom: 4rem;
+    margin-bottom: 4rem;
     font-weight: 800;
+  }
+
+  .pronunciation {
+    border: $appBorder;
+    border-radius: 30px;
+    padding: 0.25rem 2rem;
+    background-color: $mainColour;
+    color: white;
+    font-family: "Times New Roman", Times, sans-serif, serif;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    margin-top: -1rem;
+    font-weight: 400;
+
+    i {
+      font-size: 0.75rem;
+    }
   }
 
   .details {
@@ -105,7 +123,7 @@ body {
     // border: 1px solid red;
   }
 
-  .word-type {
+  .partOfSpeech {
     text-align: right;
     border-right: $appBorder;
     padding: 1.4rem 2rem;
@@ -123,7 +141,11 @@ body {
 
   .phrases {
     border-left: $appBorder;
-    padding: 1rem;
+    padding: 1.5rem 2rem;
+  }
+
+  .example {
+    margin-top: -0.75rem;
   }
 
   .-small-caps {
@@ -138,13 +160,15 @@ body {
   }
 
   h5 {
-    // font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: 800;
-    // padding-top: 0.75rem;
+    font-style: italic;
+    padding-top: 0.19rem;
   }
 
   ul {
     padding-inline-start: 0;
+    line-height: 1.5;
   }
 
   li {
@@ -154,11 +178,4 @@ body {
     // font-size: 0.75rem;
     // border: 1px solid red;
   }
-}
-.word {
-  // border: 1px solid red;
-}
-
-.details {
-  // border: 1px solid red;
 }
