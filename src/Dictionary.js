@@ -1,19 +1,34 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Results from "./Results";
+import Photos from "./Photos";
 
 const Dictionary = () => {
   const [searchTerm, setSearchTerm] = useState("dictionary");
-  const [searchResults, setSearchResults] = useState(null);
+  const [dictionarySearchResults, setDictionarySearchResults] = useState(null);
+  const [pexelsSearchResults, setPexelsSearchResults] = useState(null);
 
-  const handleSearchResults = (response) => {
+  const handleDictionarySearchResults = (response) => {
     // Sample API response: https://api.dictionaryapi.dev/api/v2/entries/en_GB/space
-    setSearchResults(response.data);
+    setDictionarySearchResults(response.data);
+  };
+
+  const handlePexelsSearchResults = (response) => {
+    console.log(response.data.photos);
+    setPexelsSearchResults(response.data.photos);
   };
 
   const search = () => {
-    const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_GB/${searchTerm}`;
-    axios.get(apiUrl).then(handleSearchResults);
+    const pexelsAPIKey = `563492ad6f9170000100000141ddc25c945d476e8e2f1bac04658ba0`;
+    const pexelsAPIURL = `https://api.pexels.com/v1/search?query=${searchTerm}&per_page=1`;
+    axios
+      .get(pexelsAPIURL, {
+        headers: { Authorization: `Bearer ${pexelsAPIKey}` },
+      })
+      .then(handlePexelsSearchResults);
+
+    const dictionaryAPIURL = `https://api.dictionaryapi.dev/api/v2/entries/en_GB/${searchTerm}`;
+    axios.get(dictionaryAPIURL).then(handleDictionarySearchResults);
   };
 
   const handleSubmit = (event) => {
@@ -61,7 +76,10 @@ const Dictionary = () => {
         </div>
       </div>
       <div className="App-body">
-        <Results results={searchResults} />
+        <Results results={dictionarySearchResults} />
+      </div>
+      <div className="container">
+        <Photos results={pexelsSearchResults} />
       </div>
     </div>
   );
