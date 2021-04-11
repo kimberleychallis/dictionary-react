@@ -62,6 +62,7 @@ const Dictionary = () => {
                     aria-label="Word search"
                     aria-describedby="button-addon2"
                     onChange={handleEntry}
+                    autoFocus
                     required
                   />
                   <div className="input-group-append">

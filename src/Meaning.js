@@ -4,15 +4,15 @@ import Synonym from "./Synonym";
 const Meaning = (props) => {
   return (
     <div className="details">
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
-          <div className="col-2 partOfSpeech">
+          <div className="col-md-2 partOfSpeech">
             <p>{props.resultDetails.partOfSpeech}</p>
           </div>
 
           {/* BEGINNING OF A DEFINITION */}
 
-          <div className="col-6 entry">
+          <div className="col-md-6 entry">
             {props.resultDetails.definitions.map((definition, index) => {
               return (
                 <div key={index}>
@@ -25,7 +25,7 @@ const Meaning = (props) => {
             })}
           </div>
 
-          <div className="col col-md-4 phrases">
+          <div className="col-md-4 phrases">
             <p className="-small-caps">in use</p>
 
             {/* EXAMPLE PHRASES */}

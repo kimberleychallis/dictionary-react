@@ -8,10 +8,10 @@ function App() {
         <div className="container">
           <header className="App-header">
             <div className="row">
-              <div className="col-3">
+              <div className="col">
                 <h1>dictionary.js</h1>
               </div>
-              <div className="col-9 menubar">
+              <div className="col menubar">
                 <ul>
                   <li>
                     <a href="https://github.com/kimberleychallis/dictionary-react">

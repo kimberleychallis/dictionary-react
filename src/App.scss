@@ -20,7 +20,7 @@ body {
 
 .App-header {
   font-size: 1rem;
-  margin-top: calc(4rem + 2vh);
+  margin-top: calc(2rem + 5vh);
 
   h1 {
     font-style: italic;
@@ -29,12 +29,13 @@ body {
   }
 
   .menubar {
+    display: inline-block;
     text-align: right;
 
     li {
       list-style-type: none;
       display: inline-block;
-      padding: 0 1rem;
+      padding: 0 0 0 1rem;
     }
     a {
       color: $textColour;
@@ -62,20 +63,23 @@ body {
     border: none;
     color: white;
     font-size: 1rem;
-    padding: 1rem;
+    padding: 1.25rem 1.5rem;
     transition: 250ms ease-in-out;
+    border-radius: 30px;
   }
 
   input.form-control::placeholder {
     color: rgba(255, 255, 255, 0.9);
   }
 
-  input.form-control:hover::placeholder {
+  input.form-control:hover::placeholder,
+  input.form-control:focus::placeholder {
     color: $secondaryColour;
   }
 
   input.form-control:hover,
-  input.form-control:focus {
+  input.form-control:focus,
+  input.form-control:active {
     background-color: rgba(255, 255, 255, 0.9);
     color: $secondaryColour;
   }
@@ -85,6 +89,8 @@ body {
     border: none;
     color: rgba(255, 255, 255, 0.9);
     left: 1px;
+    border-radius: 30px;
+    padding-right: 1.5rem;
   }
 
   .input-group button:hover {
@@ -94,26 +100,30 @@ body {
 }
 
 .App-body {
-  margin-bottom: 4rem;
   border-bottom: $appBorder;
+  margin-bottom: 4rem;
+
   .headword {
-    font-size: 10rem;
     margin-bottom: 4rem;
+  }
+
+  .word {
+    font-size: 10rem;
     font-weight: 800;
   }
 
   .pronunciation {
-    border: $appBorder;
-    border-radius: 30px;
-    padding: 0.25rem 2rem;
     background-color: $mainColour;
+    border-radius: 30px;
+    border: $appBorder;
     color: $textColour;
+    display: inline-block;
     font-family: "Times New Roman", Times, sans-serif, serif;
     font-size: 1rem;
-    letter-spacing: 0.1rem;
-    margin-top: -1rem;
     font-weight: 400;
-    display: inline-block;
+    letter-spacing: 0.1rem;
+    padding: 0.25rem 2rem;
+    white-space: nowrap;
 
     &:hover {
       text-decoration: none;
@@ -124,19 +134,22 @@ body {
     }
   }
 
-  .details {
-    border-top: $appBorder;
-  }
+  // .details {
+  //   border-top: $appBorder;
+  // }
 
   .entry {
     padding: 1rem 2rem;
+    border-right: $appBorder;
+    border-left: $appBorder;
+    border-top: $appBorder;
   }
 
   .partOfSpeech {
-    text-align: right;
-    border-right: $appBorder;
-    padding: 1.4rem 2rem;
     font-style: italic;
+    padding: 1.4rem 2rem 1rem 2rem;
+    text-align: right;
+    border-top: $appBorder;
   }
 
   .definition {
@@ -149,10 +162,10 @@ body {
   }
 
   .phrases {
-    border-left: $appBorder;
-    padding: 1.5rem 2rem;
     font-size: 1rem;
     line-height: 1.5;
+    padding: 1.5rem 2rem;
+    border-top: $appBorder;
   }
 
   .example {
@@ -160,10 +173,10 @@ body {
   }
 
   .-small-caps {
-    text-transform: uppercase;
     font-size: 0.75rem;
-    letter-spacing: 0.15rem;
     font-weight: 800;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
   }
 
   h4 {
@@ -172,20 +185,26 @@ body {
 
   h5 {
     font-size: 1rem;
-    font-weight: 800;
     font-style: italic;
+    font-weight: 800;
     padding-top: 0.19rem;
   }
 
   ul {
-    padding-inline-start: 0;
     line-height: 1.5;
+    padding-inline-start: 0;
   }
 
   li {
-    list-style-type: none;
     display: inline-block;
+    list-style-type: none;
     padding: 0 0.25rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    .partOfSpeech {
+      text-align: left;
+    }
   }
 }
 
@@ -195,11 +214,11 @@ body {
 
   .photo {
     border-radius: 50%;
-    margin-bottom: 4rem;
-    filter: grayscale(100%) brightness(1.1);
-    max-width: 175px;
-    opacity: 0.75;
     border: $appBorder;
+    filter: grayscale(100%) brightness(1.1);
+    margin-bottom: 4rem;
+    max-width: 80%;
+    opacity: 0.75;
     padding: 10px;
   }
 }
