@@ -8,14 +8,11 @@ const Dictionary = () => {
 
   const search = (response) => {
     // Sample API response: https://api.dictionaryapi.dev/api/v2/entries/en_GB/space
-    // console.log("API CALL");
     setSearchResults(response.data);
-    // console.log(response.data[0].meanings[0].definitions[0].definition);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // alert(`Searching for ${searchTerm}`);
 
     const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_GB/${searchTerm}`;
     axios.get(apiUrl).then(search);

@@ -2,8 +2,6 @@ import React from "react";
 import Synonym from "./Synonym";
 
 const Meaning = (props) => {
-  // console.log(props.resultDetails);
-
   return (
     <div className="details">
       <div className="container">
