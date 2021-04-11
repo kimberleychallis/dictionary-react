@@ -3,7 +3,7 @@ import axios from "axios";
 import Results from "./Results";
 
 const Dictionary = () => {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState("dictionary");
   const [searchResults, setSearchResults] = useState(null);
 
   const search = (response) => {
