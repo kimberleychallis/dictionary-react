@@ -14,13 +14,13 @@ const Dictionary = () => {
   };
 
   const handlePexelsSearchResults = (response) => {
-    console.log(response.data.photos);
+    // console.log(response.data.photos);
     setPexelsSearchResults(response.data.photos);
   };
 
   const search = () => {
     const pexelsAPIKey = `563492ad6f9170000100000141ddc25c945d476e8e2f1bac04658ba0`;
-    const pexelsAPIURL = `https://api.pexels.com/v1/search?query=${searchTerm}&per_page=1`;
+    const pexelsAPIURL = `https://api.pexels.com/v1/search?query=${searchTerm}&per_page=5`;
     axios
       .get(pexelsAPIURL, {
         headers: { Authorization: `Bearer ${pexelsAPIKey}` },

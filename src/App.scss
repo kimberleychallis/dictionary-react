@@ -188,3 +188,18 @@ body {
     padding: 0 0.25rem;
   }
 }
+
+.photos-results {
+  display: flex;
+  justify-content: space-between;
+
+  .photo {
+    border-radius: 50%;
+    margin-bottom: 4rem;
+    filter: grayscale(100%) brightness(1.1);
+    max-width: 175px;
+    opacity: 0.75;
+    border: $appBorder;
+    padding: 10px;
+  }
+}
