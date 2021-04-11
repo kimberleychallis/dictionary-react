@@ -1,4 +1,5 @@
 import React from "react";
+import Synonym from "./Synonym";
 
 const Meaning = (props) => {
   // console.log(props.resultDetails);
@@ -21,27 +22,7 @@ const Meaning = (props) => {
                     {index + 1}. {definition.definition}
                   </h4>
 
-                  <div className="row synonyms">
-                    <div className="col-2">
-                      <h5>synonyms</h5>
-                    </div>
-                    <div className="col-9">
-                      <ul>
-                        <li>slot</li>
-                        <li>arena</li>
-                        <li>capacity</li>
-                        <li>zone</li>
-                        <li>area</li>
-                        <li>field</li>
-                        <li>location</li>
-                        <li>territory</li>
-                        <li>area</li>
-                        <li>field</li>
-                        <li>location</li>
-                        <li>territory</li>
-                      </ul>
-                    </div>
-                  </div>
+                  <Synonym synonyms={definition.synonyms} />
                 </div>
               );
             })}
