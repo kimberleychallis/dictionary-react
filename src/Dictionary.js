@@ -27,6 +27,7 @@ const Dictionary = () => {
 
   useEffect(() => {
     search();
+    // eslint-disable-next-line
   }, []);
 
   return (
