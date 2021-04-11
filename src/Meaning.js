@@ -21,7 +21,6 @@ const Meaning = (props) => {
                   <h4 className="definition">
                     {index + 1}. {definition.definition}
                   </h4>
-
                   <Synonym synonyms={definition.synonyms} />
                 </div>
               );
