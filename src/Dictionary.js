@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Results from "./Results";
 
@@ -6,21 +6,28 @@ const Dictionary = () => {
   const [searchTerm, setSearchTerm] = useState("dictionary");
   const [searchResults, setSearchResults] = useState(null);
 
-  const search = (response) => {
+  const handleSearchResults = (response) => {
     // Sample API response: https://api.dictionaryapi.dev/api/v2/entries/en_GB/space
     setSearchResults(response.data);
   };
 
+  const search = () => {
+    const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_GB/${searchTerm}`;
+    axios.get(apiUrl).then(handleSearchResults);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_GB/${searchTerm}`;
-    axios.get(apiUrl).then(search);
+    search();
   };
 
   const handleEntry = (event) => {
     setSearchTerm(event.target.value);
   };
+
+  useEffect(() => {
+    search();
+  }, []);
 
   return (
     <div>
