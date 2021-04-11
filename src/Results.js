@@ -12,10 +12,13 @@ const Results = (props) => {
                 <h3 className="headword">{props.results[0].word}</h3>
               </div>
               <div className="col-4 text-right">
-                <button className="pronunciation">
+                <a
+                  href={props.results[0].phonetics[0].audio}
+                  className="pronunciation"
+                >
                   <i className="fas fa-volume-up"></i>{" "}
                   {props.results[0].phonetics[0].text}
-                </button>
+                </a>
               </div>
             </div>
           </div>

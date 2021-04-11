@@ -112,6 +112,11 @@ body {
     letter-spacing: 0.1rem;
     margin-top: -1rem;
     font-weight: 400;
+    display: inline-block;
+
+    &:hover {
+      text-decoration: none;
+    }
 
     i {
       font-size: 0.75rem;
@@ -124,7 +129,6 @@ body {
 
   .entry {
     padding: 1rem 2rem;
-    // border: 1px solid red;
   }
 
   .partOfSpeech {
@@ -135,14 +139,11 @@ body {
   }
 
   .definition {
-    // padding-top: 1rem;
     padding-bottom: 1rem;
-    // border-top: $appBorder;
     text-transform: lowercase;
   }
 
   .synonyms {
-    // border: 1px solid red;
     font-size: 1rem;
   }
 
@@ -182,7 +183,5 @@ body {
     list-style-type: none;
     display: inline-block;
     padding: 0 0.25rem;
-    // font-size: 0.75rem;
-    // border: 1px solid red;
   }
 }
