@@ -38,6 +38,7 @@ body {
     }
     a {
       color: $textColour;
+      transition: 250ms ease-in-out;
       &:hover {
         color: $secondaryColour;
         text-decoration: none;
@@ -62,7 +63,7 @@ body {
     color: white;
     font-size: 1rem;
     padding: 1rem;
-    transition: 200ms;
+    transition: 250ms ease-in-out;
   }
 
   input.form-control::placeholder {
