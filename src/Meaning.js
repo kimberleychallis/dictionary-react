@@ -53,12 +53,14 @@ const Meaning = (props) => {
             {/* EXAMPLE PHRASES */}
 
             {props.resultDetails.definitions.map((definition, index) => {
-              return (
-                <p className="example" key={index}>
-                  {index + 1}. &ldquo;{definition.example}
-                  &rdquo;
-                </p>
-              );
+              if (definition.example) {
+                return (
+                  <p className="example" key={index}>
+                    {index + 1}. &ldquo;{definition.example}
+                    &rdquo;
+                  </p>
+                );
+              } else return null;
             })}
 
             {/* END EXAMPLE PHRASES */}
