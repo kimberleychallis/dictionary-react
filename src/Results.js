@@ -10,7 +10,7 @@ const Results = (props) => {
             <div className="col">
               <h3 className="word">{props.results[0].word}</h3>
             </div>
-            <div className="col text-right">
+            <div className="col phonetics">
               <a
                 href={props.results[0].phonetics[0].audio}
                 className="pronunciation"
