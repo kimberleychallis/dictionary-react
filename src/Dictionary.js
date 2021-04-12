@@ -9,25 +9,25 @@ const Dictionary = () => {
   const [pexelsSearchResults, setPexelsSearchResults] = useState(null);
 
   const handleDictionarySearchResults = (response) => {
-    // Sample API response: https://api.dictionaryapi.dev/api/v2/entries/en_GB/space
     setDictionarySearchResults(response.data);
   };
 
   const handlePexelsSearchResults = (response) => {
-    // console.log(response.data.photos);
     setPexelsSearchResults(response.data.photos);
   };
 
   const search = () => {
     const pexelsAPIKey = `563492ad6f9170000100000141ddc25c945d476e8e2f1bac04658ba0`;
     const pexelsAPIURL = `https://api.pexels.com/v1/search?query=${searchTerm}&per_page=4`;
+
+    const dictionaryAPIURL = `https://api.dictionaryapi.dev/api/v2/entries/en_GB/${searchTerm}`;
+
     axios
       .get(pexelsAPIURL, {
         headers: { Authorization: `Bearer ${pexelsAPIKey}` },
       })
       .then(handlePexelsSearchResults);
 
-    const dictionaryAPIURL = `https://api.dictionaryapi.dev/api/v2/entries/en_GB/${searchTerm}`;
     axios.get(dictionaryAPIURL).then(handleDictionarySearchResults);
   };
 
@@ -51,7 +51,7 @@ const Dictionary = () => {
         <div className="App-search">
           <div className="row">
             <div className="col">
-              <h2>seek, and ye shall find</h2>
+              <h2 id="seek-and-ye-shall-find">seek, and ye shall find</h2>
 
               <form className="Search" onSubmit={handleSubmit}>
                 <div className="input-group">
@@ -60,7 +60,7 @@ const Dictionary = () => {
                     className="form-control"
                     placeholder="Enter a word"
                     aria-label="Word search"
-                    aria-describedby="button-addon2"
+                    aria-describedby="seek-and-ye-shall-find"
                     onChange={handleEntry}
                     autoFocus
                     required
